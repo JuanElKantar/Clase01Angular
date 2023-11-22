@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-dashboard',
@@ -20,7 +21,16 @@ export class DashboardComponent {
   constructor(public router: Router) { }
 
   navegarLogin() {
-    this.router.navigateByUrl('/');
+    // Mostrar la alerta al cerrar sesión
+    Swal.fire({
+      title: '¡Hasta luego!',
+      text: 'Has cerrado sesión, vuelve pronto.',
+      icon: 'success',
+      confirmButtonText: 'OK'
+    }).then(() => {
+      // Redirigir a la página de inicio de sesión después de cerrar sesión
+      this.router.navigateByUrl('/');
+    });
   }
 
   // Método para agregar una nueva ruta
