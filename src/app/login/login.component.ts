@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 interface Credencial {
   nombre: string;
@@ -19,12 +20,23 @@ export class LoginComponent {
     const nombre = (document.getElementById("nombre") as HTMLInputElement)?.value || '';
     const password = (document.getElementById("password") as HTMLInputElement)?.value || '';
 
+    // Validaciones adicionales
+    if (nombre.length < 2) {
+      Swal.fire('Error', 'Credenciales incorrectas', 'error');
+      return;
+    }
+
+    if (password.length < 8 || !/\d/.test(password)) {
+      Swal.fire('Error', 'Credenciales incorrectas', 'error');
+      return;
+    }
+
     const credencialesString = localStorage.getItem('data');
-    
+
     if (credencialesString) {
       const credenciales: Credencial[] = JSON.parse(credencialesString);
-      
-      const credencialEncontrada = credenciales.find(credencial => 
+
+      const credencialEncontrada = credenciales.find(credencial =>
         credencial.nombre === nombre && credencial.contraseña === password
       );
 
@@ -32,6 +44,7 @@ export class LoginComponent {
         console.log('Funciona redirección a dashboard');
         this.router.navigateByUrl('/dashboard');
       } else {
+        Swal.fire('Error', 'Credenciales incorrectas, vuelve a intentarlo', 'error');
         console.log('Funciona redirección a register');
         this.navegarRegister();
       }
