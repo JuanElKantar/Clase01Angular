@@ -61,6 +61,17 @@
             <li class="h-100 d-flex align-items-center">Sobre nosotros</li>
             <li class="h-100 d-flex align-items-center">Nuestros servicios</li>
             <li class="h-100 d-flex align-items-center">Contactanos</li>
+            <!-- Menú desplegable -->
+            <li class="dropdown">
+                <button class="btn btn-outline-success dropdown-toggle" type="button" id="menuOpciones" data-bs-toggle="dropdown" aria-expanded="false">
+                    Opciones
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="menuOpciones">
+                    <li><a class="dropdown-item" href="#" (click)="mostrarFormulario('crearRuta')">Crear Ruta</a></li>
+                    <li><a class="dropdown-item" href="#" (click)="mostrarFormulario('anadirConductor')">Añadir Conductor</a></li>
+                    <li><a class="dropdown-item" href="#" (click)="mostrarFormulario('estacionNueva')">Estación Nueva</a></li>
+                </ul>
+            </li>
             <li><button class="btn btn-outline-success btn-cerrar-sesion" (click)="navegarLogin()"><i class="fas fa-user" style="color: blue;"></i>Cerrar sesión</button></li>
         </ul>
     </div>
