@@ -13,7 +13,7 @@
         crossorigin="anonymous"></script>
     <title>Register</title>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@12"></script>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -30,7 +30,7 @@
             </div>
             <div class="mb-3">
                 <label for="ID" class="form-label">Nro. Documento</label>
-                <input name="ID" id="ID" class="form-control border border-success">
+                <input name="ID" id="ID" class="form-control border border-success" required minlength="6">
             </div>
             <div class="d-flex justify-content-around mb-3">
                 <div>
