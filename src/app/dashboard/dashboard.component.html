@@ -1,62 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/8232721784.js" crossorigin="anonymous"></script>
-    <title>Transporte Dashboard</title>
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Login</title>
 </head>
+
 <body class="d-flex flex-column min-vh-100">
 
-<!-- Barra de navegación -->
-<header class="main-header">
-    <label for="btn-nav" class="btn-nav"><i class="fas fa-bars"></i></label>
-
-    <input type="checkbox" id="btn-nav">
-    
-    <nav>
-      <ul class="navigation">
-        <li><a href="">Home</a></li>
-        <li><a href="">Opciones de empleo</a></li>
-        <li><a href="">Perfil</a></li>
-        <li><a href="">Salir</a></li>
-      </ul>
-    </nav>
-    
-</header>
-
-<!-- Contenido principal -->
-<main class="container d-flex flex-column justify-content-center">
-    <div class="row">
-        <!-- Sección de lista de buses -->
-        <div class="col-md-6">
-            
-        </div>
-
-        <!-- Sección de opciones (añadir, actualizar, eliminar) -->
-        <div class="col-md-6">
-           
-        </div>
-    </div>
-</main>
-
-<!-- Footer -->
-<footer class="footer mt-auto py-3">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <p class="text-muted">&copy; Computrabajo 2023. Todos los derechos reservados.</p>
+    <main class="container d-flex align-items-center justify-content-center vh-75" style="max-width: 1200px;">
+        <div class="bg-light p-5 text-center">
+            <h1 class="mb-4">Bienvenido, inicia sesión</h1>
+            <img src="../assets/img/logo.png" alt="Logo" class="mb-4" style="max-width: 70%; height: auto; display: block; margin: 0 auto;">
+            <div class="mb-3">
+                <label for="nombre" class="form-label text-dark"><b>Nombre:</b></label>
+                <input class="form-control border border-success" type="text" id="nombre" required minlength="2">
             </div>
-            <div class="col-md-6">
-                <p class="text-muted">Contacto: <strong>+123 456 7890</strong></p>
+            <div class="mb-3">
+                <label for="password" class="form-label text-dark"><b>Contraseña:</b></label>
+                <input class="form-control border border-success" type="password" id="password" required minlength="8" pattern="^(?=.*[0-9])">
+            </div>
+            <div class="d-grid gap-2 mb-3">
+                <button class="btn btn-outline-success" (click)="navegar()">Login</button>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-link" (click)="navegarRegister()">Regístrate aquí</button>
             </div>
         </div>
-    </div>
-</footer>
+    </main>
 
-<!-- Importa Bootstrap y otros scripts según sea necesario -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@12"></script>
+
 </body>
+
 </html>
