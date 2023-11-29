@@ -19,26 +19,30 @@
 <body class="d-flex flex-column min-vh-100">
 
     <main class="container d-flex align-items-center justify-content-center">
-        <div class="bg-light p-5">
+        <div class="bg-light p-5 text-center">
+            <!-- Agrega un logotipo justo debajo del título "Regístrate" -->
             <h1 class="mb-4">Regístrate</h1>
+            <img src="../assets/img/logo.png" alt="Logo" class="mb-4" style="max-width: 70%; height: auto; display: block; margin: 0 auto;">
+            <!-- Fin del logotipo -->
+    
             <div class="mb-3">
-                <label for="tipoID" class="form-label">Tipo de Documento</label>
+                <label for="tipoID" class="form-label"><b>Tipo de Documento</b></label>
                 <select name="tipoID" id="tipoID" class="form-select border border-success">
                     <option value="CC">C.C</option>
                     <option value="TI">T.I</option>
                 </select>
             </div>
             <div class="mb-3">
-                <label for="ID" class="form-label">Nro. Documento</label>
+                <label for="ID" class="form-label"><b>Nro Documento:</b></label>
                 <input name="ID" id="ID" class="form-control border border-success" required minlength="6">
             </div>
             <div class="d-flex justify-content-around mb-3">
                 <div>
-                    <label for="name" class="form-label">Nombre:</label>
+                    <label for="name" class="form-label"><b>Nombre:</b></label>
                     <input name="name" id="name" class="form-control border border-success">
                 </div>
                 <div>
-                    <label for="pass" class="form-label">Password</label>
+                    <label for="pass" class="form-label"><b>Password:</b></label>
                     <input type="password" name="pass" id="pass" class="form-control border border-success">
                 </div>
             </div>
@@ -50,7 +54,6 @@
             </div>
         </div>
     </main>
-
 </body>
 
 </html>
