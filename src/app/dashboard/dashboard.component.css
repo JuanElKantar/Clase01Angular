@@ -158,3 +158,126 @@ body {
     box-shadow: 0 0 20px rgba(0, 128, 122, 0.5);
         }
  
+        :root {
+          --main-color: #fff;
+      }
+
+      * {
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+      }
+
+      body {
+          font-family: 'Roboto', sans-serif;
+          overflow: hidden;
+      }
+
+      .main-header {
+          background: rgb(0, 164, 172);
+          width: 100%;
+          height: 50px;
+      }
+
+      nav {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 200px;
+          top: 50px;
+          height: calc(100vh - 50px);
+          background: rgb(0, 149, 172);
+          transform: translateX(-100%);
+          transition: .4s ease;
+          margin-left: auto;
+      }
+
+      .navigation li {
+          list-style: none;
+          width: 100%;
+          border-bottom: 1px solid rgba(255, 255, 255, .5);
+          color: white;
+          margin-left: 10px;
+      }
+
+      .navigation a {
+          color: var(--main-color);
+          display: block;
+          line-height: 3.5;
+          padding: 0 10px;
+          text-decoration: none;
+          transition: .4s ease;
+      }
+
+      .navigation a:hover {
+          transform: translateX(10%);
+      }
+
+      #btn-nav {
+          display: none;
+          background-color: aqua;
+      }
+
+      #btn-nav:checked~nav {
+          transform: translateX(0);
+      }
+
+      .btn-nav {
+          font-size: 30px;
+          position: absolute;
+          left: 0;
+          top: 0;
+          cursor: pointer;
+          padding: 6.5px 15px;
+          transition: .2s ease;
+          width: 100px;
+          height: 50px;
+      }
+
+      .fas fa-bars {
+          background-color: white;
+      }
+
+      .btn-nav:hover {
+          background: rgba(0, 0, 0, .3);
+      }
+
+      /* Estilo de la tarjeta de ofertas laborales */
+      .card-offers {
+          margin-bottom: 20px;
+      }
+
+      /* Encabezado de la tarjeta de ofertas laborales */
+      .card-offers .card-header {
+          font-size: 1.5rem;
+          background-color: #007b8e; /* Color de fondo del encabezado */
+          color: #fff; /* Color del texto del encabezado */
+      }
+
+      /* Lista de ofertas laborales */
+      .card-offers .list-group {
+          max-height: 300px;
+          overflow-y: auto;
+      }
+
+      .card-offers .list-group-item {
+          border: 1px solid #dee2e6;
+          border-radius: 8px;
+          margin-bottom: 10px;
+      }
+
+      .card-offers .list-group-item:hover {
+          background-color: #f8f9fa;
+      }
+
+      .card-offers .list-group-item h5 {
+          color: #007b8e; /* Color del título de la oferta */
+      }
+
+      .card-offers .list-group-item p {
+          color: #555; /* Color del texto de la oferta */
+      }
+
+      .card-offers .list-group-item small {
+          color: #868e96; /* Color del texto pequeño (fecha) */
+      }
